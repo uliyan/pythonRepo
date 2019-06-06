@@ -1,0 +1,107 @@
+[33mcommit 28c7aa1f441ff53a8c134a84db532ce306c014c7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Uliyan <uzziface@gmail.com>
+Date:   Thu Jun 6 08:34:33 2019 +0200
+
+    First iteration of work
+
+[1mdiff --git a/ControlFlow.py b/ControlFlow.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..be60d95[m
+[1m--- /dev/null[m
+[1m+++ b/ControlFlow.py[m
+[36m@@ -0,0 +1,58 @@[m
+[32m+[m[32m"""[m
+[32m+[m[32mBasics of the;[m
+[32m+[m[32m    + if-statement[m
+[32m+[m[32m    + try-statement, not control flow but life bruh[m
+[32m+[m[32m    + while-statement[m
+[32m+[m[32m    + for-loop[m
+[32m+[m[32m"""[m
+[32m+[m
+[32m+[m[32m#if statement[m
+[32m+[m[32mnum = 7[m
+[32m+[m[32mif num % 2 == 0:[m
+[32m+[m[32m    if num < 0:[m
+[32m+[m[32m        print("num is even and negative")[m
+[32m+[m[32m    elif num == 0:[m
+[32m+[m[32m        print("num is 0")[m
+[32m+[m[32m    else:[m
+[32m+[m[32m        print("num is even and positive")[m
+[32m+[m[32melse:[m
+[32m+[m[32m    if num < 0:[m
+[32m+[m[32m        print("num is odd and negative")[m
+[32m+[m[32m    else:[m
+[32m+[m[32m        print("num is odd and positive")[m
+[32m+[m
+[32m+[m[32m#getting input[m
+[32m+[m[32mraw = input("Enter anything: ")[m
+[32m+[m
+[32m+[m[32m#printing type of raw, always a string[m
+[32m+[m[32mprint(type(raw))[m
+[32m+[m
+[32m+[m[32m#try statement[m
+[32m+[m[32m#checking if type of raw is actually an integer or not[m
+[32m+[m[32mtry:[m
+[32m+[m[32m    val = int(raw)[m
+[32m+[m[32m    if val >= 0 or val < 0:[m
+[32m+[m[32m        print("You have entered a number")[m
+[32m+[m[32mexcept ValueError:[m
+[32m+[m[32m    print("You entered a string")[m
+[32m+[m
+[32m+[m[32m#checks variable if it's a digit[m
+[32m+[m[32mprint(raw.isdigit())[m
+[32m+[m
+[32m+[m[32m#while statement, 'else' is optional and always executes unless a 'break' statement is used[m
+[32m+[m[32mi = 1[m
+[32m+[m[32mwhile i <= 10:[m
+[32m+[m[32m    print("i is {0}".format(i))[m
+[32m+[m[32m    i = i + 1[m
+[32m+[m[32melse:[m
+[32m+[m[32m    print("The while statement has ended")[m
+[32m+[m
+[32m+[m[32m#for loop, 'else' is also optional[m
+[32m+[m[32mfor i in range(1, 11):[m
+[32m+[m[32m    if i == 3:[m
+[32m+[m[32m        continue[m
+[32m+[m[32m    print("{0}*{0} = {1}".format(i, i*i))[m
+[32m+[m[32m    if i == 6:[m
+[32m+[m[32m        break[m
+[32m+[m[32melse:[m
+[32m+[m[32m    print("The for loop ended")[m
+[1mdiff --git a/HelloWorld.py b/HelloWorld.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..94e67f0[m
+[1m--- /dev/null[m
+[1m+++ b/HelloWorld.py[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mprint ("Hello World")[m
+[1mdiff --git a/StringTingz.py b/StringTingz.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dac79c0[m
+[1m--- /dev/null[m
+[1m+++ b/StringTingz.py[m
+[36m@@ -0,0 +1,24 @@[m
+[32m+[m[32mname  = "uliyan"[m
+[32m+[m[32mprint(name)[m
+[32m+[m
+[32m+[m[32m#length of string[m
+[32m+[m[32mprint("length of string: {0}". format(len(name)))[m
+[32m+[m
+[32m+[m[32m#formatted printing[m
+[32m+[m[32mprint("{0} is my name".format(name))[m
+[32m+[m[32mprint("{0} is 3*3".format(3*3))[m
+[32m+[m
+[32m+[m[32m#printing on same line[m
+[32m+[m[32mprint("pizza", end = "")[m
+[32m+[m[32mprint(" is nice")[m
+[32m+[m
+[32m+[m[32m#multi-line printing[m
+[32m+[m[32mlines = '''this[m
+[32m+[m[32mis[m
+[32m+[m[32mon[m
+[32m+[m[32mmany[m
+[32m+[m[32mlines'''[m
+[32m+[m[32mprint(lines)[m
+[32m+[m
+[32m+[m[32mlines = "ioegneg"[m
+[32m+[m[32mprint(lines)[m
